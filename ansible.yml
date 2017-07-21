@@ -19,8 +19,8 @@
       regexp: '^secret_key'
       create: yes
   - file:
-      mode: a+x
-      path: /etc/dnspcap.js
+      mode: "a+x"
+      path: /home/ubuntu/dnspcap/dnspcap.js
   - name: install libpcap-dev
     apt:
       update_cache: yes
@@ -30,4 +30,4 @@
       - git
   - name: Install node.js packages
     npm:
-      path: /home/ubuntu/dnscap
+      path: /home/ubuntu/dnspcap
