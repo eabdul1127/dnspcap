@@ -6,7 +6,7 @@ var zmq = require("zeromq"),
     sock.setsockopt(zmq['ZMQ_SNDHWM'], 100000);
 var SysLogger = require("ain2"),
     logger = new SysLogger();
-var config = require("/etc/dnspcap.js");
+var config = require("/etc/config.js");
 var Cryptr = require("cryptr"),
     cryptr = new Cryptr(config.secret_key, "aes-128-ctr");
 var memoize = require("memoizee"),
