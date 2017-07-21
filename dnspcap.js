@@ -16,7 +16,7 @@ var sanitizePacket = function (packet) {
   var packetData = packet.payload.payload.payload.data;
   var hashed_ip = memoized(packet.payload.payload.daddr + config.secret_key);
   var hashed_mac = memoized(packet.payload.payload.dhost + config.secret_key);
-  return { mac: hashed_mac, ip: hashed_ip, packetData: packetData };
+  return { mac: hashed_mac, ip: hashed_ip, packetData: packetData, date : new Date.getTime() };
 };
 
 sock.connect("tcp://127.0.0.1:5000");
