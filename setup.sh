@@ -13,4 +13,4 @@ pm2 startup
 pm2 start /usr/sbin/dnspcap.js eno1 &
 pm2 start /usr/sbin/dnspcap.js eno2 &
 pm2 start /usr/sbin/dnspcap.js eno3 &
- pm2 save
+pm2 save
