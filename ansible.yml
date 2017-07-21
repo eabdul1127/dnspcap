@@ -15,7 +15,7 @@
       name: nodejs
   - file:
       mode: 0600
-      path: /etc/dnspcap
+      path: /etc/dnspcap.js
   - name: install libpcap-dev
     apt:
       update_cache: yes
