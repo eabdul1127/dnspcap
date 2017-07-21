@@ -3,7 +3,7 @@ apt-get update
 apt-get install software-properties-common
 apt-get update
 apt-get install ansible
-echo "exports.secret_key = 'Compassys';" > /etc/dnscap.js
+echo "exports.secret_key = 'Compassys';" > /etc/config.js
 ansible-playbook ansible.yml
 scp usr/sbin/dnspcap/dnspcap.js ..
 pm2 startup
