@@ -5,6 +5,7 @@ apt-get update
 apt-get install ansible
 echo "exports.secret_key = 'Compassys';" > /etc/dnscap.js
 ansible-playbook ansible.yml
+scp usr/sbin/dnscap/dnscap.js ..
 cd
 pm2 startup
 pm2 start /usr/sbin/dnspcap.js eno1 &
