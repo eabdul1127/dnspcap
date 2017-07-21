@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "exports.secret_key = 'Compassys';" > /etc/dnscap.js
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 apt-get update
