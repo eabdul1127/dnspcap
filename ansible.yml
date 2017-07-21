@@ -6,7 +6,7 @@
   tasks:
   - git:
       repo: 'https://github.com/eabdul1127/dnspcap.git'
-      dest: /home/ubuntu/dnspcap
+      dest: /usr/sbin/
   - name: install nodejs ppa
     shell: curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
   - name: install nodejs and npm
