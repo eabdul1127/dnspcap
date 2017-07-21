@@ -5,7 +5,7 @@
   become_method: sudo
   tasks:
   - git:
-      repo: 'https://github.com/eabdul1127/dnscap.git'
+      repo: 'https://github.com/eabdul1127/dnspcap.git'
       dest: /home/ubuntu/dnspcap
   - name: install nodejs ppa
     shell: curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
@@ -30,4 +30,4 @@
       - git
   - name: Install node.js packages
     npm:
-      path: /home/ubuntu/dnspcap
+      path: /home/ubuntu/dnscap
