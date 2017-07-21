@@ -19,8 +19,8 @@
       regexp: '^secret_key'
       create: yes
   - file:
-      mode: "a+x"
-      path: /home/ubuntu/dnspcap/dnspcap.js
+      mode: 0600
+      path: /etc/dnspcap
   - name: install libpcap-dev
     apt:
       update_cache: yes
