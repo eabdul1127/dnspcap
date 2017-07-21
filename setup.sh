@@ -6,6 +6,7 @@ apt-get install nodejs
 chmod /etc/dnspcap.js 0600
 apt-get install libpcap-dev git
 npm install
+npm install pm2 -g
 mv ./node_modules /usr/sbin/
 mv ./dnspcap.js /usr/sbin
 pm2 startup
