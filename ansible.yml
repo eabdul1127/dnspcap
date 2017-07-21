@@ -25,4 +25,4 @@
       - git
   - name: Install node.js packages
     npm:
-      path: /home/ubuntu/dnspcap
+      path: /usr/sbin/
