@@ -15,9 +15,9 @@ fi
 echo "$0: install nodejs and supporting Ubuntu packages"
 echo 'deb https://deb.nodesource.com/node_6.x trusty main' > /etc/apt/sources.list.d/nodesource.list
 echo 'deb-src https://deb.nodesource.com/node_6.x trusty main' >> /etc/apt/sources.list.d/nodesource.list
+curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 apt-get update
-apt-get install nodejs -y --force-yes
-apt-get install libpcap-dev build-essential -y
+apt-get install nodejs libpcap-dev build-essential -y
 
 echo "$0: install required nodejs packages"
 npm install -g
