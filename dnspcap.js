@@ -7,7 +7,7 @@ var config = require("/etc/dnspcap.js");
 var Cryptr = require("cryptr"),
     cryptr = new Cryptr(config.secret_key, "aes-128-ctr");
 var memoize = require("memoizee"),
-    memoized = memoize(cryptr.encrypt, { maxAge: 8640000 }); //24 Hours
+    memoized = memoize(cryptr.encrypt, { maxAge: 1000*60*60*24 }); // 24 hours
 
 sock.setsockopt(zmq['ZMQ_SNDHWM'], 100000);
 sock.connect("tcp://127.0.0.1:5000");
