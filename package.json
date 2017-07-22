@@ -1,21 +1,21 @@
 {
-  "name": "dnscap",
+  "name": "dnspcap",
   "version": "1.0.0",
   "description": "",
-  "main": "config.js",
+  "main": "dnspcap.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eabdul1127/dnscap.git"
+    "url": "git+https://github.com/eabdul1127/dnspcap.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eabdul1127/dnscap/issues"
+    "url": "https://github.com/eabdul1127/dnspcap/issues"
   },
-  "homepage": "https://github.com/eabdul1127/dnscap#readme",
+  "homepage": "https://github.com/eabdul1127/dnspcap#readme",
   "dependencies": {
     "ain2": "^2.0.0",
     "cryptr": "^2.0.0",
