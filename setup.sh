@@ -20,6 +20,7 @@ apt-get update
 apt-get install nodejs libpcap-dev build-essential -y
 
 echo "$0: install nodejs packages"
+HOME=/root
 npm install --unsafe-perm -g
 npm install pm2 -g
 
