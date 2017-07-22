@@ -19,15 +19,14 @@ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 apt-get update
 apt-get install nodejs libpcap-dev build-essential -y
 
-echo "$0: install required nodejs packages"
-npm install -g
+echo "$0: install nodejs packages"
+npm install --unsafe-perm -g
 npm install pm2 -g
 
 echo "$0: start dnspcap.js on eno# interfaces"
 HOME=/root
-DIR=`dirname $PWD/$0`
 pm2 startup
-pm2 start $DIR/dnspcap.js --name eno1 --watch -- eno1
-pm2 start $DIR/dnspcap.js --name eno2 --watch -- eno2
-pm2 start $DIR/dnspcap.js --name eno3 --watch -- eno3
+pm2 start /usr/lib/node_modules/dnspcap/dnspcap.js --name eno1 --watch -- eno1
+pm2 start /usr/lib/node_modules/dnspcap/dnspcap.js --name eno2 --watch -- eno2
+pm2 start /usr/lib/node_modules/dnspcap/dnspcap.js --name eno3 --watch -- eno3
 pm2 save
