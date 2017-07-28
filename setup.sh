@@ -17,7 +17,7 @@ echo 'deb https://deb.nodesource.com/node_6.x trusty main' > /etc/apt/sources.li
 echo 'deb-src https://deb.nodesource.com/node_6.x trusty main' >> /etc/apt/sources.list.d/nodesource.list
 curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 apt-get update
-apt-get install nodejs libpcap-dev build-essential -y
+apt-get install nodejs libpcap-dev build-essential python -y
 
 echo "$0: install nodejs packages"
 HOME=/root
