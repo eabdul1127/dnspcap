@@ -27,7 +27,7 @@ npm install pm2 -g
 echo "$0: start dnspcap.js on eno# interfaces"
 HOME=/root
 pm2 startup
-pm2 start /usr/lib/node_modules/dnspcap/dnspcap.js --name eno1 --watch -- eno1
-pm2 start /usr/lib/node_modules/dnspcap/dnspcap.js --name eno2 --watch -- eno2
-pm2 start /usr/lib/node_modules/dnspcap/dnspcap.js --name eno3 --watch -- eno3
+pm2 start /usr/lib/node_modules/dnspcap/dnspcap.js --name eno1 --watch -- 5001 eno1
+pm2 start /usr/lib/node_modules/dnspcap/dnspcap.js --name eno2 --watch -- 5002 eno2
+pm2 start /usr/lib/node_modules/dnspcap/dnspcap.js --name eno3 --watch -- 5003 eno3
 pm2 save
