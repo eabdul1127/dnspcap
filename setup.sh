@@ -18,6 +18,7 @@ echo 'deb-src https://deb.nodesource.com/node_6.x trusty main' >> /etc/apt/sourc
 curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 apt-get update
 apt-get install nodejs libpcap-dev build-essential python -y
+apt-get install libpcre3-dev zlib1g-dev -y # needed for nginx
 
 echo "$0: install nodejs packages"
 HOME=/root
