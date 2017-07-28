@@ -8,10 +8,10 @@ var Cryptr = require("cryptr"),
     cryptr = new Cryptr(config.secret_key, "aes-128-ctr");
 var memoize = require("memoizee"),
     memoized = memoize(cryptr.encrypt, { maxAge: 1000*60*60*24 }); // 24 hours
-var communication_ip = "tcp://127.0.0.1:" + process.argv[2];
 
+var endpoint = "tcp://127.0.0.1:" + process.argv[2];
 sock.setsockopt(zmq['ZMQ_SNDHWM'], 100000);
-sock.connect(communication_ip);
+sock.connect(endpoint);
 
 var sanitizePacket = function (packet) {
   var packetData = packet.payload.payload.payload.data;
