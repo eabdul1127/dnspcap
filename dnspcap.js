@@ -16,7 +16,7 @@ sock.connect(endpoint);
 var sanitizePacket = function (packet) {
   var packetData = packet.payload.payload.payload.data;
   var hashed_ip = memoized(packet.payload.payload.daddr + config.secret_key);
-  var hashed_mac = memoized(packet.payload.payload.dhost + config.secret_key);
+  var hashed_mac = memoized(packet.payload.dhost.addr.join(".") + config.secret_key);
   return { mac: hashed_mac, ip: hashed_ip, packetData: packetData };
 };
 
